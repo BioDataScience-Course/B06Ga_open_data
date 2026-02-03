@@ -19,10 +19,12 @@ editor_options:
 # Ceci est nécessaire pour les tests SDD, ne pas utiliser dans un "vrai" projet
 if (!"tools:tests" %in% search())
   source(here::here("tests/tools_tests.R"), attach(NULL, name = "tools:tests"))
-fs::dir_create("data/cache", recurse = TRUE)
+
+# Configure Knitr pour utiliser AGG comme périphérique graphique
+knitr::opts_chunk$set(dev = "ragg_png")
 
 # Configuration de l'environnement SciViews::R
-SciViews::R("___", lang = "fr")
+SciViews::R(___, lang = "fr")
 ```
 
 # Introduction et but
@@ -32,6 +34,16 @@ SciViews::R("___", lang = "fr")
 # Matériel et méthodes
 
 <!--% Centrez-vous sur les données ici : d'où proviennent-elles ? Comment ont-elles été récoltées ? Il ne s'agit pas de faire un copier-coller du document `open_data.Rmd`, mais de rédiger ceci comme un texte propice pour une section matériel et méthodes d'un rapport en deux paragraphes maximum. Ajoutez ensuite un paragraphe relatif aux outils logiciels et statistiques que vous utilisez (inspirez-vous de vos projets antérieurs). -->
+
+<!--% Spécifier si vous avez employé l'intelligence artificielle dans votre projet. -->
+
+```{r ai_comment, output='asis'}
+select_answer(r"-{
+[] -   Ce document a été rédigé en étant assité par l'Intelligence Artificielle.
+[] -   Ce document a été rédigé sans recours à l'Intelligence Artificielle.}-")
+```
+
+<!-- Précisez ci-dessous l'utilisation que vous avez faite de l'IA. Citez le modèle utilisé. -->
 
 # Résultats
 
@@ -46,9 +58,13 @@ ___
 
 <!--% Décrivez vos données de manière adéquate (tableaux et/ou graphiques) par rapport à votre objectif de réaliser une analyse SOM ensuite. -->
 
-## Analyse MDS
+## Analyse multivariée de classification
 
-<!--% Module 9 : réalisez une analyse MDS métrique ou non métrique sur les données et interprétez-là. Si l'analyse n'est pas possible, expliquez pourquoi. Section non limitée en taille. -->
+<!--% Module 6 : réalisez une analyse de type CAH ou K-moyennes  sur les données et interprétez-là. Si l'analyse n'est pas possible, expliquez pourquoi. Section non limitée en taille. -->
+
+## Analyse multivariée d'ordination
+
+<!--% Module 7-9 : réalisez une analyse de type ACP, AFC, MFA ou  MDS métrique ou non métrique sur les données et interprétez-là. Si l'analyse n'est pas possible, expliquez pourquoi. Section non limitée en taille. -->
 
 ## Analyse SOM
 

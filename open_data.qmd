@@ -18,6 +18,9 @@ editor_options:
 if (!"tools:tests" %in% search())
   source(here::here("tests/tools_tests.R"), attach(NULL, name = "tools:tests"))
 
+# Configure Knitr pour utiliser AGG comme périphérique graphique
+knitr::opts_chunk$set(dev = "ragg_png")
+
 # Configuration de l'environnement SciViews::R
 SciViews::R(lang = "fr")
 ```
@@ -25,6 +28,16 @@ SciViews::R(lang = "fr")
 ## Principe FAIR
 
 Le principe FAIR s'applique aux données ouvertes et permet de vérifier si elles sont effectivement accessibles et réutilisables. Dans ce document, nous indiquons comment nous avons récupéré nos données et nous déterminons si elles rencontrent (ou non) les quatre contraintes relatives à ce principe.
+
+<!--% Spécifier si vous avez employé l'intelligence artificielle dans votre projet. -->
+
+```{r ai_comment, output='asis'}
+select_answer(r"-{
+[] -   Ce document a été rédigé en étant assité par l'Intelligence Artificielle.
+[] -   Ce document a été rédigé sans recours à l'Intelligence Artificielle.}-")
+```
+
+<!-- Précisez ci-dessous l'utilisation que vous avez faite de l'IA. Citez le modèle utilisé. -->
 
 ### Findable
 
