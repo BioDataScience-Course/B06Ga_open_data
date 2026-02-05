@@ -54,6 +54,6 @@ select_answer(r"-{
 
 <!--% Si vous avez coché la dernière option, expliquez de manière concise ci-dessous pourquoi il n'est pas possible de télécharger directement ces données ouvertes. -->
 
-### Elaboration du schéma de la base de données
+### Élaboration du schéma de la base de données
 
 <!--% Expliquez ci-dessous votre démarche pour réaliser un schéma correct pour votre base de données à l'aide des fonctions du package {dm} et placez le code qui réalise ce travail dans des chunks. -->

@@ -3,5 +3,6 @@
 # réaliser différentes analyses multivariées avant de choisir les analyses que
 # vous garderez pour votre rapport finale.
 #
-# Assurez vous que ce script compile.
+# Assurez vous que le contenu de ce script s'exécute sans erreurs avant
+# soumission finale!
 
